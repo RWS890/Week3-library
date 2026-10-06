@@ -10,6 +10,16 @@ namespace Library
        public String Author;
        public int ISBN;
 
+        // Paramaterised Constructor that allows us to "Construct" a new 
+        // Book object
+        // Consturctors save time
+        public Book(String bookTitle, string bookAuthor, int bookISBN)
+        { 
+        Title = bookTitle;
+        Author = bookAuthor;
+        ISBN = bookISBN;
+        }
+
         public void DisplayInfo()
         {
             Console.WriteLine($"Book Title: {Title}");
