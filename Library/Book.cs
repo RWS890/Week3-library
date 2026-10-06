@@ -16,13 +16,39 @@ namespace Library
         public string Title 
         {
             get { return title; }
-            set { title = value; }
-        }
+            set
+            {
+                // Check if any incoming char is a digit
+                if (!value.Any(char.IsDigit))
+                {
+                    title = value;
+                }
+                else
+                {
+                    Console.WriteLine("Cannot enter number for title");
+                }
+
+            } 
+                     
+         }
+
+
 
         public string Author
         {
             get { return author; }
-            set { author = value; }
+            set 
+            {
+                // Check if any incoming char is a digit
+                if (!value.Any(char.IsDigit))
+                {
+                    author = value;
+                }
+                else
+                {
+                    Console.WriteLine("Cannot enter number for author");
+                }
+            }
         }
 
         public int ISBN
